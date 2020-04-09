@@ -1,0 +1,28 @@
+spring:
+  redis: 
+    cluster: 
+      nodes: ${bjyx.redis.cluster}
+      timeout: 60000ms
+      password: 
+      lettuce: 
+      database: 0
+      pool: 
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+  clickhouse: 
+#    address: jdbc:clickhouse://96.2.0.54:8123,jdbc:clickhouse://96.2.0.69:8123,jdbc:clickhouse://96.2.0.71:8123
+    address: jdbc:clickhouse://96.2.1.19:8123
+    username: 
+    password:
+    db: sgmw_big_data
+    socketTimeout: 60000
+  db:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.14.8.236/baojun_app
+    user: root
+    password: Sgmw@5050
+
+  tmpFilePath: C:/wuling/export/tmp/
+bucketsize: 20
